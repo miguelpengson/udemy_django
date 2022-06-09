@@ -5,15 +5,34 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Index</title>
+        <title>Django Level Two</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="{% static 'first_app/main.css' %}">
         
     </head>
     <body>
-        <h1>{{ insert_content }}</h1>
-        
+        <h1>Hi welcome!</h1>
+        <h2>Here are your access records</h2>
+
+        <div>
+            {% if access_records %}
+            <table>
+                <thead>
+                    <th>Site Name</th>
+                    <th>Date Accessed</th>
+                </thead>
+                {% for acc in access_records %}
+                <tr>
+                    <td>{{ acc.name }}</td>
+                    <td>{{ acc.date }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% else %}
+                <p>No Access Records Found!</p>
+        </div>
+        {% endif %}
         <script src="" async defer></script>
     </body>
 </html>
