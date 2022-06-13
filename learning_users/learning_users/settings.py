@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Note: common mistake using / instead of .
+    # Note: my common mistake using / instead of .
+    # this connects the app to the project
     'basic_app.apps.BasicAppConfig',
 ]
 
@@ -134,7 +135,7 @@ STATICFILES_DIRS = [ BASE_DIR / "static/"]
 
 # Media Files (user uploaded files) need to secure
 # https://docs.djangoproject.com/en/4.0/ref/settings/#std-setting-MEDIA_ROOT
-MEDIA_ROOT = [ BASE_DIR / "media"]
+MEDIA_ROOT = [ BASE_DIR / "media/"]
 MEDIA_URL = 'media/'
 
 
