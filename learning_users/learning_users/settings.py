@@ -131,11 +131,11 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 # When you want to include other static files other than app/static/app/
-STATICFILES_DIRS = [ BASE_DIR / "static/"]
+# STATICFILES_DIRS = [ BASE_DIR / "static/", ]
 
 # Media Files (user uploaded files) need to secure
 # https://docs.djangoproject.com/en/4.0/ref/settings/#std-setting-MEDIA_ROOT
-MEDIA_ROOT = [ BASE_DIR / "media/"]
+# MEDIA_ROOT = [ BASE_DIR / "media/"]
 MEDIA_URL = 'media/'
 
 
