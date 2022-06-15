@@ -63,10 +63,10 @@ TEMPLATES = [
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
+                'django.template.contex_processors.media',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 # if you want to use {{ MEDIA_URL }} in your templates
-                'django.template.contex_processors.media',
             ],
         },
     },

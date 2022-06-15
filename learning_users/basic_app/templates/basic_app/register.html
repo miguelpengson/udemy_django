@@ -1,5 +1,5 @@
-{% extends "basic_app/bash.html" %}
-{% load staticfiles %}
+{% extends "basic_app/base.html" %}
+{% load static %}
 {% block body_block %}
 
 <div class="jumbotron">
@@ -14,6 +14,7 @@
         {{ uer_form.as_p }}
         <!-- from views from the context dictionary -->
         {{ profile_form.as_p }}
+        {{ media }}
         <input type="submit" name="" value="Register">
     </form>
     {% endif %}
