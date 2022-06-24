@@ -3,18 +3,20 @@
 {% block body_block %}
 
 <div class="jumbotron">
+    <!--if the context dictionary in views.py returns registered -->
     {% if registered %}
      <h1>Thank you for regestring!</h1>
-     {% else %}
+    {% else %}
      <h1>Register Here!</h1>
      <h3>Fill out the form:</h3>
-
+    <!-- Since we are uploading picture we need the enctype="..." or 
+         uploading pictures will not work -->
     <form enctype="multipart/form-data" method="POST">
         {% csrf_token %}
         {{ uer_form.as_p }}
-        <!-- from views from the context dictionary -->
+        <!-- from views from the context dictionary both above and below
+             this line  -->
         {{ profile_form.as_p }}
-        {{ media }}
         <input type="submit" name="" value="Register">
     </form>
     {% endif %}
