@@ -13,7 +13,7 @@
          uploading pictures will not work -->
     <form enctype="multipart/form-data" method="POST">
         {% csrf_token %}
-        {{ uer_form.as_p }}
+        {{ user_form.as_p }}
         <!-- from views from the context dictionary both above and below
              this line  -->
         {{ profile_form.as_p }}

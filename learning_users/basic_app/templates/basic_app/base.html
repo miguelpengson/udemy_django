@@ -7,13 +7,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   </head>
   <body>
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-default navbar-static-top navbar-expand">
         <div class="container">
             <ul class="nav navbar-nav">
                 <li><a class="navbar-brand" href="{% url 'index' %}">DJANGO</a></li>
-                
-                <li><a class="navbar-link" href="{% url 'admin:index' %}">Admin</a></li>
-                <li><a class="navbar-link" href="{% url 'basic_app:register' %}">Register</a></li>
+                <li><a class="nav-link nav-item active" href="{% url 'admin:index' %}">Admin</a></li>
+                <li><a class="nav-link nav-item active" href="{% url 'basic_app:register' %}">Register</a></li>
             </ul>
         </div>
     </nav>
@@ -24,7 +23,6 @@
         {% endblock body_block %}
     </div>
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>  
   </body>
 </html>
