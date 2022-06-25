@@ -8,6 +8,7 @@ def index(request):
 def register(request):
     registered = False
     if request.method == "POST":
+        # Grab information from the userform and profileform
         user_form = UserForm(data=request.POST)
         profile_form = UserProfileInfoForm(data=request.POST)
 
@@ -18,8 +19,9 @@ def register(request):
             # Hashing the password by using the set_password method
             user.set_password(user.password)
             user.save()
-            # Get errors with collisions?
+            # Get errors with collisions where it tries to overide user
             profile = profile_form.save(commit=False)
+            # One to one from models is defined here
             profile.user = user
 
             if 'profile_pic' in request.FILES:

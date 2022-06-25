@@ -93,8 +93,8 @@ DATABASES = {
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
 PASSWORD_HASHERS = [
-    'django.contrib.auth.hashers.Aragon2PasswordHasher',
-    'django.contrib.auth.hashers.BCryptSHa256PasswordHasher',
+    'django.contrib.auth.hashers.Argon2PasswordHasher',
+    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
     'django.contrib.auth.hashers.BCryptPasswordHasher',
     'django.contrib.auth.hashers.PBKDF2PasswordHasher',
     'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
@@ -140,6 +140,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#std-setting-MEDIA_ROOT
 # MEDIA_ROOT = [ BASE_DIR / "media/"]
 MEDIA_URL = 'media/'
+
+LOGIN_URL = 'basic_app/user_login/'
 
 
 # Default primary key field type
