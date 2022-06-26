@@ -13,7 +13,14 @@
                 <li><a class="navbar-brand" href="{% url 'index' %}">DJANGO</a></li>
                 <li><a class="nav-link nav-item active" href="{% url 'admin:index' %}">Admin</a></li>
                 <li><a class="nav-link nav-item active" href="{% url 'basic_app:register' %}">Register</a></li>
-            </ul>
+
+                {% if user.is_authenticated %}
+                <li><a class="nav-link nav-item active" href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                <li><a class="nav-link nav-item active" href="{% url 'basic_app:user_login'%}">Login</a></li>
+                {% endif %}
+
+              </ul>
         </div>
     </nav>
 

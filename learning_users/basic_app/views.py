@@ -3,7 +3,7 @@ from .forms import UserForm, UserProfileInfoForm
 
 
 from django.contrib.auth import authenticate, login, logout
-from django.http import HttpResponse, HttpResponseRedirect, HtttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 # old before django 4.0 from django.core.urlresolvers imort reverse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
@@ -57,6 +57,7 @@ def register(request):
 def user_login(request):
     
     if request.method == 'POST':
+        # Because login.html simple form where 'username' is from 
         username = request.POST.get('username')
         password = request.POST.get('password')
 
@@ -67,7 +68,7 @@ def user_login(request):
                 login(request, user)
                 return HttpResponseRedirect(reverse('index'))
             else:
-                return HtttpResponse("ACCOUNT NOT ACTIVE")
+                return HttpResponse("ACCOUNT NOT ACTIVE")
         else:
             print('Someone tried to login and failed!')
             print(f"Username: {'username'} and password: {'password'}")
